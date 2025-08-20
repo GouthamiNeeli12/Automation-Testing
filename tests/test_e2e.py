@@ -19,6 +19,7 @@ with open(test_data_path) as json_file:
 @pytest.mark.smoke
 @pytest.mark.parametrize( "test_list_item", test_list )
 def test_endtoend(crossbrowser,test_list_item):
+    #assign the return value of crossbrowser fixture to driver
     driver=crossbrowser
     loginpage=Loginpage(driver)
     print(loginpage.getBrowserName())
